@@ -9,7 +9,7 @@ exports.getAllports = async (req, res, next) => {
 			data: { post },
 		});
 	} catch (error) {
-		res.json(error);
+		next(error);
 	}
 };
 exports.createOnePorts = async (req, res, next) => {
@@ -21,7 +21,7 @@ exports.createOnePorts = async (req, res, next) => {
 			data: { post },
 		});
 	} catch (error) {
-		res.json(error);
+		next(error);
 	}
 };
 

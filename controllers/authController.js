@@ -11,7 +11,7 @@ exports.register = async (req, res, next) => {
 			data: { token, userName: user.name },
 		});
 	} catch (error) {
-		res.json(error);
+		next(error);
 	}
 };
 
